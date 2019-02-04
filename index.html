@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookmark List</title>
+    <link rel="stylesheet" href="bookmark.css">
+</head>
+<body>
+    <h1>Your Saved Sites</h1>   
+    
+        <article class="initialViewButtons js-initialViewButtons">
+            <button class="addButton js-addButton">Add a Site!</button>
+            <span class="js-minRating minRating">
+                <label for="site-minimum-rating">Select Minimum Rating &ge; </label>
+                    <select id="minId" name="selector" id="site-minimum-rating">
+                        <option value="">---SELECT---</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+            </span>
+        </article>
+            <form id="js-bookmarkSubmitForm" class="hidden">
+            <article>
+                <label for="site-title">Site Title</label>
+                <input type="text" class="js-title" name="title" id="site-title" placeholder="Enter Site Name" required/>
+            </article>
+            <article>
+                <label for="site-url">URL</label>
+                <input type="text" class="js-url" name="url" id="site-url" placeholder="Enter URL" required/>
+            </article>
+            <article>
+                <label for="site-description">Description</label>
+                <input type="text" class="js-desc" name="desc" id="site-description" placeholder="Enter Description"/>
+            </article>
+            <article>
+                <label for="site-rating">Rating</label>
+                <select class="js-rating" name="rating" id="site-rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </article>
+            <button type="submit">Submit Bookmark</button>
+            </form>
+        <article class="list container">
+            <ul class="bookmarkList" id="js-bookmarkList"></ul>
+        </article>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="api.js"></script>
+    <script src="store.js"></script>
+    <script src="bookmark-list.js"></script> 
+    <script src="index.js"></script>
+   
+    
+</body>
+</html>
