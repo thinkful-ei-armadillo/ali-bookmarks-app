@@ -56,8 +56,12 @@ function handleBookmarkAdd() {
             store.adding = !store.adding;
             render();
         })
-        .catch(e => store.addError(e));
+        .catch(e => {
+            store.addError(e);
+            render();
+        });    
         event.currentTarget.reset();
+        store.error = null;
     });
 }
 
@@ -69,8 +73,11 @@ function handleBookmarkDelete() {
             store.deleteBookmark(id);
             render();
         })
-        .catch(e => store.addError(e));
-    })
+        .catch(e => {
+            store.addError(e);
+            render();
+    });
+});
 }
 
 function handleBookmarkExpand() {
@@ -153,6 +160,7 @@ function handleBookmarkList() {
     handleBookmarkFilter();
     handleAddButton();
     handleBookmarkDelete();
+    handleCloseError();
     
 
 }

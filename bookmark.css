@@ -6,4 +6,41 @@
     border: solid 1px black;
 }
 
+li {
+    font-display: bold;
+    color: silver;
+}
 
+body {
+    background-color: black;
+    color: white;
+}
+
+.site-title {
+    color: red;
+}
+
+.site-url {
+    color: blue;
+}
+
+.site-desc {
+    color: yellow;
+}
+
+.site-rating {
+    color: green;
+}
+
+button {
+    background-color: silver;
+    color: black;
+}
+
+input {
+    position: relative;
+}
+
+.error-alert {
+    color: red;
+}
